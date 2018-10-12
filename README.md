@@ -7,7 +7,7 @@
 
 This is often useful and avoids the annoyance of pasting text and then having to repeatedly press keys, or reach for the mouse, to return the cursor back to the original paste insertion point, a tedious task familiar in advanced text editing.
 
-The plugin is fully compatible with multiple selections.
+The plugin is fully compatible with multiple selections, seamlessly imitating the behaviour of the native Sublime Text `paste` command.
 
 ### Requirements
 
