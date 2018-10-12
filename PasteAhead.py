@@ -15,9 +15,9 @@ class PasteAheadCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
 
-        self.new_selections = []
-        self.selections = self.view.sel()
-        num_selections = len(self.selections)
+        view = self.view
+        selections = view.sel()
+        num_selections = len(selections)
 
         if num_selections < 1:
             return
@@ -29,35 +29,17 @@ class PasteAheadCommand(sublime_plugin.TextCommand):
         # which corresponds to each of the multiple selections.
 
         if num_selections > 1 and num_selections == num_clipboard_lines:
-            clipboard_lines = clipboard.split("\n")
-            for i, sel in enumerate(self.selections):
-                self.store_new_selection(sel)
-                self.view.replace(edit, sel, clipboard_lines[i])
+            clipboard = clipboard.split("\n")
+            for i, sel in enumerate(selections):
+                view.replace(edit, sel, clipboard[i])
+                selections.subtract(sel)
+                selections.add(sel.begin())
 
         # Handle single selections and multiple selections with
         # out clipboard line pairs; insert the whole clipboard.
 
         else:
-            for sel in self.selections:
-                self.store_new_selection(sel)
-                self.view.replace(edit, sel, clipboard)
-
-        self.replace_selections()
-
-
-    def store_new_selection(self, sel):
-
-        new_cursor = sublime.Region(sel.begin())
-        self.new_selections.append(new_cursor)
-
-
-    def replace_selections(self):
-
-        self.selections.clear()
-
-        # Do not use add_all() to add the new selections, since
-        # it will fail on ST2, and it is no more efficient - it
-        # just calls add() in a loop, as below (see sublime.py).
-
-        for sel in self.new_selections:
-            self.selections.add(sel)
+            for sel in selections:
+                view.replace(edit, sel, clipboard)
+                selections.subtract(sel)
+                selections.add(sel.begin())
