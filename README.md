@@ -5,9 +5,9 @@
 
 *PasteAhead* is a Sublime Text plugin which inserts the contents of the clipboard ahead of the cursor's position as opposed to behind it. Put another way, the cursor remains where it is and the pasted text is inserted in front of it.
 
-This is useful to avoid the annoyance of pasting text and then having to press the `Ctrl+Left` keys repeatedly to move the cursor back to the original insertion point, a tedious task familiar to programmers.
+This is often useful and avoids the annoyance of pasting text and then having to repeatedly press keys, or reach for the mouse, to return the cursor back to the original paste insertion point, a tedious task familiar in advanced text editing.
 
-The plugin is, of course, fully compatible with multiple selections.
+The plugin is fully compatible with multiple selections.
 
 ### Requirements
 
@@ -24,13 +24,15 @@ Users can download the [zip file](https://github.com/mattst/SublimePasteAhead/ar
 
 ### Key Bindings
 
-Users must manually add a key binding, which calls the `paste_ahead` command, to their user keys file. The plugin provides no default key binding because of the impossibility of choosing keys that would suit all users.
+Users must manually add a key binding, which calls the `paste_ahead` command, to their user keys file.
+
+The plugin provides no default key binding because of the difficulty in choosing keys to suit all users.
 
     { "keys": ["???+???"], "command": "paste_ahead" },
 
 #### Key Binding Suggestions
 
-I use `ctrl+shift+v` which steals the keys from the `paste_and_indent` command, which I rarely use because the `auto_indent` setting works so well. In fact I've remapped the various paste commands like this:
+I use `ctrl+shift+v` which steals the keys from the `paste_and_indent` command. I've remapped the various paste commands like this:
 
     { "keys": ["ctrl+shift+v"], "command": "paste_ahead" },
     { "keys": ["ctrl+k", "ctrl+v"], "command": "paste_and_indent" },
@@ -40,7 +42,7 @@ Those who use `ctrl+insert` and `shift+insert` to copy and paste may want to con
 
     { "keys": ["ctrl+shift+insert"], "command": "paste_ahead" },
 
-OSX users might simply use the unmapped `ctrl+v` since cut, copy, and paste are mapped using the `super` key. While Linux and Windows users could use `super+v` which is similarly unmapped on those OSes.
+OSX users might simply use the unmapped `ctrl+v` since cut, copy, and paste are mapped using the `super` key. While Linux and Windows users could use `super+v` which is similarly unmapped by default on those OSes.
 
     OSX:       { "keys": ["ctrl+v"], "command": "paste_ahead" },
     Linux/Win: { "keys": ["super+v"], "command": "paste_ahead" },
