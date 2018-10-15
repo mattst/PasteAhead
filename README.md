@@ -19,8 +19,9 @@ Use [Package Control](https://packagecontrol.io/):
 
 - Open the command palette and select: `Package Control: Install Package`
 - Wait for the package list to be updated and then select: `PasteAhead`
+- Note: Package submitted, awaiting adding by admins.
 
-Users can download the [zip file](https://github.com/mattst/SublimePasteAhead/archive/master.zip) and install the plugin [manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html) if they prefer.
+Users can download the [zip file](https://github.com/mattst/PasteAhead/archive/master.zip) and install the plugin [manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html) if they prefer.
 
 ### Key Bindings
 
