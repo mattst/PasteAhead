@@ -17,9 +17,9 @@ Sublime Text version 2 or 3.
 
 Use [Package Control](https://packagecontrol.io/):
 
+- **Note: Package submitted, waiting to be added by admins.**
 - Open the command palette and select: `Package Control: Install Package`
 - Wait for the package list to be updated and then select: `PasteAhead`
-- Note: Package submitted, awaiting adding by admins.
 
 Users can download the [zip file](https://github.com/mattst/PasteAhead/archive/master.zip) and install the plugin [manually](http://docs.sublimetext.info/en/latest/extensibility/packages.html) if they prefer.
 
