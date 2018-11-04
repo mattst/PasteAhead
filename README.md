@@ -1,23 +1,18 @@
 
 ## PasteAhead (Sublime Text Plugin)
 
-### Description
-
 *PasteAhead* is a Sublime Text plugin which inserts the contents of the clipboard ahead of the cursor's position as opposed to behind it. Put another way, the cursor remains where it is and the pasted text is inserted in front of it.
 
-This is often useful and avoids the annoyance of pasting text and then having to repeatedly press keys, or reach for the mouse, to return the cursor back to the original paste insertion point, a tedious task familiar to coders.
+This is often useful and avoids the annoyance of pasting text and then having to repeatedly press keys, or reach for the mouse, to return the cursor back to the original insertion point, a repetitive task familiar to coders.
 
-The plugin is fully compatible with multiple selections, seamlessly imitating the behaviour of the native Sublime Text `paste` command.
+*PasteAhead* is fully compatible with multiple selections and works with them in exactly the same way as usual except that it pastes ahead of the cursor.
 
-### Requirements
-
-Sublime Text version 2 or 3.
+The plugin works with both Sublime Text v2 and v3.
 
 ### Installing
 
 Use [Package Control](https://packagecontrol.io/):
 
-- *Note: Package submitted, waiting to be added by admins.*
 - Open the command palette and select: `Package Control: Install Package`
 - Wait for the package list to be updated and then select: `PasteAhead`
 
